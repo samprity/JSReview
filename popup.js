@@ -17,7 +17,9 @@ window.addEventListener('load', function(evt) {
     statusDisplay = document.getElementById('status-display');
     var linkJS = document.getElementById('linkJS');
 	linkJS.addEventListener('click', function() {
-        var windowVal = "http://samprity.github.io/JSLint1/?Key="+rawLink;
+		var whiteSpaceCheck = ($("#whiteSpace").is(':checked')) ? "wt" : "wn";
+		var multipleVarCheck = ($("#multipleVar").is(':checked')) ? "wt" : "wn";
+        var windowVal = "http://samprity.github.io/JSLint1/?Key="+rawLink+","+whiteSpaceCheck+","+multipleVarCheck;
 		var win = window.open(windowVal, '_blank');
 	    win.focus();
 }, false);
