@@ -19,10 +19,10 @@ window.addEventListener('load', function(evt) {
 	linkJS.addEventListener('click', function() {
 		var whiteSpaceCheck = ($("#whiteSpace").is(':checked')) ? "wt" : "wn";
 		var multipleVarCheck = ($("#multipleVar").is(':checked')) ? "mt" : "mn";
-		var bitwiseOperators  = ($("bitWiseOperators").is(':checked')) ? "bt" : "bn";
-		var maxLineLength = $("maxLineLength").val();
-		var maxWarnings = $("maxWarnings").val();
-        var windowVal = "http://samprity.github.io/JSLint1/?Key="+rawLink+","+multipleVarCheck+","+bitWiseOperators+","+whiteSpaceCheck;//+","+maxLineLength+","+maxWarnings;
+		var bitwiseOperators  = ($("#bitWiseOperators").is(':checked')) ? "bt" : "bn";
+		var maxLineLength = $("#maxLineLength").val();
+		var maxWarnings = $("#maxWarnings").val();
+        var windowVal = "http://samprity.github.io/JSLint1/?Key="+rawLink+","+multipleVarCheck+","+bitWiseOperators+","+whiteSpaceCheck+","+maxLineLength+","+maxWarnings;
 		var win = window.open(windowVal, '_blank');
 	    win.focus();
 }, false);
