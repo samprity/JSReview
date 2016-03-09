@@ -22,7 +22,7 @@ window.addEventListener('load', function(evt) {
 		var bitwiseOperators  = ($("bitWiseOperators").is(':checked')) ? "bt" : "bn";
 		var maxLineLength = $("maxLineLength").val();
 		var maxWarnings = $("maxWarnings").val();
-        var windowVal = "http://samprity.github.io/JSLint1/?Key="+rawLink+","+whiteSpaceCheck+","+multipleVarCheck+","+bitWiseOperators;//+","+maxLineLength+","+maxWarnings;
+        var windowVal = "http://samprity.github.io/JSLint1/?Key="+rawLink+","+multipleVarCheck+","+bitWiseOperators+","+whiteSpaceCheck;//+","+maxLineLength+","+maxWarnings;
 		var win = window.open(windowVal, '_blank');
 	    win.focus();
 }, false);
